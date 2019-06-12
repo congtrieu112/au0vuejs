@@ -15,7 +15,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
-      extract: true
+      extract: true,
+      
     })
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
@@ -31,9 +32,14 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false,
       },
-      sourceMap: true
+      sourceMap: true,
+      query:{
+          presets: ['es2015'],
+          plugins: ["transform-es2015-template-literals"]
+        }
+
     }),
     // extract css into its own file
     new ExtractTextPlugin({
