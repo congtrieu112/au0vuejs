@@ -1,0 +1,6 @@
+{
+    "require": {
+        "auth0/auth0-php": "^5.4",
+        "josegonzalez/dotenv": "dev-master"
+    }
+}
