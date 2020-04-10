@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "auth0-js": "^9.0.0-beta.5",
+    "auth0-js": "^9.13.2",
     "axios": "^0.16.1",
     "jquery": "^3.2.1",
     "jwt-decode": "^2.2.0",
